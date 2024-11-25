@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ copilot-vim ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [copilot-vim];
 }

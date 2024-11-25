@@ -1,6 +1,9 @@
-{ vimPlugins, fetchFromGitHub, vimUtils, ... }:
-
-let
+{
+  vimPlugins,
+  fetchFromGitHub,
+  vimUtils,
+  ...
+}: let
   vim-pets = vimUtils.buildVimPlugin {
     name = "vim-pets";
     src = fetchFromGitHub {

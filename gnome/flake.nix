@@ -7,16 +7,16 @@
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
       url = "github:hill/flakes?dir=fish";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     tmux-flake = {
       url = "github:hill/flakes?dir=tmux";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-flake = {
       url = "github:hill/flakes?dir=vim";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-ime = {
@@ -399,7 +399,7 @@
       dconf-nix = pkgs.stdenv.mkDerivation {
         name = "dconf-nix";
         builder = pkgs.bash;
-        args = [ "-c" "${pkgs.dconf2nix}/bin/dconf2nix -i ${dconf-ini} -o $out" ];
+        args = ["-c" "${pkgs.dconf2nix}/bin/dconf2nix -i ${dconf-ini} -o $out"];
       };
     in {
       packages = rec {

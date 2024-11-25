@@ -1,7 +1,9 @@
-{ vimPlugins, pkgs, ... }:
-
 {
-  plugins = with vimPlugins; [ ale ];
+  vimPlugins,
+  pkgs,
+  ...
+}: {
+  plugins = with vimPlugins; [ale];
 
   rc = ''
     " https://github.com/dense-analysis/ale/blob/master/supported-tools.md

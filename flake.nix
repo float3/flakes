@@ -2,39 +2,42 @@
   description = "meta-flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-lts.url = "github:nixos/nixpkgs/nixos-lts";
+
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
       url = "./fish";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     vim-flake = {
       url = "./vim";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     git-flake = {
       url = "./git";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.vim-flake.follows = "vim-flake";
     };
     vscode-flake = {
       url = "./vscode";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     tmux-flake = {
       url = "./tmux";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     vimb-flake = {
       url = "./vimb";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     gnome-flake = {
       url = "./gnome";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
       inputs.tmux-flake.follows = "tmux-flake";
       inputs.vim-flake.follows = "vim-flake";
@@ -58,7 +61,7 @@
     in {
       packages = {
         fish = fish-flake.packages.${system}.fish;
-        nushell = nushell-flake.packages.${system}.nushell;
+        # nushell = nushell-flake.packages.${system}.nushell;
         git = git-flake.packages.${system}.git;
         tmux = tmux-flake.packages.${system}.tmux;
         vim = vim-flake.defaultPackage.${system};

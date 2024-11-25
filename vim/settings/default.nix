@@ -1,6 +1,8 @@
-{ pkgs, myFish, ...}:
-
-let
+{
+  pkgs,
+  myFish,
+  ...
+}: let
   modFiles = [
     # Plugins
     ./ale.nix
@@ -27,5 +29,6 @@ let
     ./vimrc.nix
   ];
 
-  importModFile = f: pkgs.callPackage f { inherit myFish; };
-in map importModFile modFiles
+  importModFile = f: pkgs.callPackage f {inherit myFish;};
+in
+  map importModFile modFiles

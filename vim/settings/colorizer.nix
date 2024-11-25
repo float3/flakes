@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ colorizer ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [colorizer];
 }

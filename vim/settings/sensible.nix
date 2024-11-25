@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ vim-sensible ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [vim-sensible];
 }

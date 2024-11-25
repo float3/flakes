@@ -4,68 +4,74 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.vim-flake.url = "github:hill/flakes?dir=vim";
 
-  outputs = { self, nixpkgs, flake-utils, vim-flake, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    vim-flake,
+    ...
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
         pkgs = nixpkgs.legacyPackages.${system};
         vim = vim-flake.defaultPackage.${system};
         gitignore = pkgs.writeText "gitignore" ''
-# Direnv
-.envrc
-.direnv
+          # Direnv
+          .envrc
+          .direnv
 
-# Terraform
-**/.terraform/*
-*.tfstate
-*.tfstate.*
-crash.log
-crash.*.log
-*.tfvars
-*.tfvars.json
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-.terraformrc
-terraform.rc
+          # Terraform
+          **/.terraform/*
+          *.tfstate
+          *.tfstate.*
+          crash.log
+          crash.*.log
+          *.tfvars
+          *.tfvars.json
+          override.tf
+          override.tf.json
+          *_override.tf
+          *_override.tf.json
+          .terraformrc
+          terraform.rc
         '';
         gitconfig = pkgs.writeText "gitconfig" ''
-[color]
-  ui = "auto"
+          [color]
+            ui = "auto"
 
-[core]
-  autocrlf = "input"
-  editor = "${vim}/bin/vim"
-  pager = "${pkgs.less}/bin/less -+F"
-  whitespace = "cr-at-eol"
-  excludesFile = "${gitignore}"
+          [core]
+            autocrlf = "input"
+            editor = "${vim}/bin/vim"
+            pager = "${pkgs.less}/bin/less -+F"
+            whitespace = "cr-at-eol"
+            excludesFile = "${gitignore}"
 
-[diff]
-  renames = "copies"
+          [diff]
+            renames = "copies"
 
-[format]
-  pretty = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset"
+          [format]
+            pretty = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset"
 
-[merge]
-  conflictstyle = "diff3"
-  tool = "vimdiff"
+          [merge]
+            conflictstyle = "diff3"
+            tool = "vimdiff"
 
-[mergetool]
-  prompt = "true"
+          [mergetool]
+            prompt = "true"
 
-[pull]
-  ff = "only"
+          [pull]
+            ff = "only"
 
-[push]
-  default = "simple"
+          [push]
+            default = "simple"
 
-[include]
-  path = ~/.gitconfig
-  path = ~/.config/git/config
+          [include]
+            path = ~/.gitconfig
+            path = ~/.config/git/config
 
-[user]
-  email = "github@hill.io"
-  name = "Spencer Heywood"
+          [user]
+            email = "github@hill.io"
+            name = "Spencer Heywood"
 
         '';
       in {

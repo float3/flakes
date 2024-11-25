@@ -1,4 +1,3 @@
-{ vimPlugins, ... }:
-{
-  plugins = with vimPlugins; [ vim-fish ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [vim-fish];
 }

@@ -1,7 +1,9 @@
-{ pkgs, vimPlugins, ... }:
-
 {
-  plugins = with vimPlugins; [ glow-nvim ];
+  pkgs,
+  vimPlugins,
+  ...
+}: {
+  plugins = with vimPlugins; [glow-nvim];
   rc = ''
     nnoremap mdp :Glow %<CR>
     lua << EOF

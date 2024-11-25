@@ -1,7 +1,5 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ nerdtree ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [nerdtree];
   rc = ''
     map <C-n> :NERDTreeToggle<CR>
     " Start NERDTree when Vim starts with a directory argument.

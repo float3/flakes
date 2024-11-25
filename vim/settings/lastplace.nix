@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ vim-lastplace ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [vim-lastplace];
 }

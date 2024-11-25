@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ fugitive ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [fugitive];
 }

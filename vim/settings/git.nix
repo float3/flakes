@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   rc = ''
     command GitAdd :w! <bar> :Git add -v %
 

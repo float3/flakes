@@ -1,5 +1,3 @@
-{ vimPlugins, ... }:
-
-{
-  plugins = with vimPlugins; [ vim-gitgutter ];
+{vimPlugins, ...}: {
+  plugins = with vimPlugins; [vim-gitgutter];
 }
