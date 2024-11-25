@@ -143,8 +143,7 @@
         "workbench.colorTheme" = "Default High Contrast";
         "workbench.remoteIndicator.showExtensionRecommendations" = false;
         "workbench.reduceMotion" = true;
-        "workbench.startupEditor" = "none";
-        "workbench.startupEditor" = false;
+        "workbench.startupEditor" = "readme";
         "workbench.statusBar.visible" = true;
         "workbench.tips.enabled" = true;
         "workbench.tree.indent" = 4;
