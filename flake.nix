@@ -2,8 +2,7 @@
   description = "meta-flake";
 
   inputs = {
-    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
@@ -45,7 +44,7 @@
 
   outputs = inputs @ {
     self,
-    nixpkgs-unstable,
+    nixpkgs,
     flake-utils,
     fish-flake,
     git-flake,
@@ -56,7 +55,7 @@
     gnome-flake,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = nixpkgs-unstable.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
       packages = {
         fish = fish-flake.packages.${system}.fish;

@@ -13,7 +13,7 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = nixpkgs-unstable.legacyPackages.${system};
+        pkgs = nixpkgs.legacyPackages.${system};
         myFish = fish-flake.packages.${system}.fish;
         myClip =
           if pkgs.stdenv.isDarwin

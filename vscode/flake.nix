@@ -2,26 +2,25 @@
   description = "hill vscode config";
 
   inputs = {
-    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-utils.url = "github:numtide/flake-utils";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     fish-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
   outputs = inputs @ {
     self,
-    nixpkgs-unstable,
+    nixpkgs,
     flake-utils,
     fish-flake,
     nix-vscode-extensions,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs-unstable {
+      pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };

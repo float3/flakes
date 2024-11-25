@@ -7,11 +7,11 @@
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1732556111,
-        "narHash": "sha256-qWs1JS3bm4Qj9aSTZgpwmkAEtlcpjLsgb8RozvXbXRk=",
+        "lastModified": 1732557003,
+        "narHash": "sha256-aSndJETnrMH+euaGfS+vArVUzr6+Zmn2pwR2LhCzMls=",
         "ref": "refs/heads/master",
-        "rev": "784a34d98c3a7e4bdeb0d31d14212c01739e7e32",
-        "revCount": 8,
+        "rev": "16713f06300ebc501ac3b93752fc9841af1f514c",
+        "revCount": 11,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
