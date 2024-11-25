@@ -2,7 +2,7 @@
   description = "hill git config";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.vim-flake.url = "github:hill/flakes?dir=vim";
+  inputs.vim-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
 
   outputs = {
     self,

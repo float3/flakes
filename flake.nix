@@ -47,6 +47,8 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nixpkgs-unstable,
+    nixpkgs-lts,
     flake-utils,
     fish-flake,
     git-flake,
@@ -57,7 +59,7 @@
     gnome-flake,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs-unstable.legacyPackages.${system};
     in {
       packages = {
         fish = fish-flake.packages.${system}.fish;
@@ -74,8 +76,8 @@
         # op-desktop-setup = op-flake.packages.${system}.op-desktop-setup;
         # nixos-vm = lima-flake.packages.${system}.lima-vm;
         # chromium-widevine = chromium-widevine-flake.packages.aarch64-linux.chromium-widevine;
-        gnome = gnome-flake.packages.${system}.gnome-desktop-setup;
-        gnome-dconf = gnome-flake.packages.${system}.dconf;
+        # gnome = gnome-flake.packages.${system}.gnome-desktop-setup;
+        # gnome-dconf = gnome-flake.packages.${system}.dconf;
         # helix = helix-flake.packages.${system}.helix;
       };
       formatter = pkgs.alejandra;

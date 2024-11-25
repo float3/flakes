@@ -6,22 +6,22 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11"; # pinned for gnome-extensions-cli instability
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
-      url = "github:hill/flakes?dir=fish";
+      url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     tmux-flake = {
-      url = "github:hill/flakes?dir=tmux";
+      url = "git+ssh://git@github.com/float3/flakes.git?dir=tmux";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-flake = {
-      url = "github:hill/flakes?dir=vim";
+      url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-ime = {
       flake = false;
-      url = "github:hill/vim-input-editor";
+      url = "github:heywoodlh/vim-input-editor";
     };
     nordic = {
       flake = false;

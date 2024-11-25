@@ -2,7 +2,7 @@
   description = "hill tmux flake";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.fish-flake.url = "github:hill/flakes?dir=fish";
+  inputs.fish-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
 
   outputs = {
     self,

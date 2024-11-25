@@ -5,7 +5,7 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   inputs.fish-flake = {
-    url = "github:hill/flakes?dir=fish";
+    url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 

@@ -13,13 +13,13 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 If you want to try it out, run the Flake:
 
 ```
-nix run "github:hill/flakes/main?dir=git"
+nix run "github:float3/flakes/main?dir=git"
 ```
 
 If you want to install it, install it to your Nix profile:
 
 ```
-nix profile install "github:hill/flakes/main?dir=git"
+nix profile install "github:float3/flakes/main?dir=git"
 ```
 
 If you want to use it in a Flake, do something like this:
@@ -30,7 +30,7 @@ If you want to use it in a Flake, do something like this:
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    git-configs.url = "github:hill/flakes/main?dir=git";
+    git-configs.url = "github:float3/flakes/main?dir=git";
   };
 
   outputs = inputs@{ self, nixpkgs, git-configs }: {

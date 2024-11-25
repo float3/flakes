@@ -9,30 +9,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install Nix
-      uses: DeterminateSystems/nix-installer-action@main
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
 
-    - name: Setup Nix Magic Cache
-      uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: Setup Nix Magic Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
 
-    - name: Update sub-flakes
-      run: |
-        nix flake update ./fish
-        nix flake update ./vim
-        nix flake update ./tmux
-        nix flake update ./git
-        nix flake update ./vscode
-        nix flake update ./wezterm
-        nix flake update ./st
-        nix flake update ./jetporch
-        nix flake update .
+      - name: Update sub-flakes
+        run: |
+          nix flake update --flake ./fish
+          nix flake update --flake ./vim
+          nix flake update --flake ./gnome
+          nix flake update --flake ./tmux
+          nix flake update --flake ./git
+          nix flake update --flake ./vscode
+          nix flake update --flake .
 
-    - name: If scheduled or manually triggered, add updated flake.lock if changed, commit and push
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: './'
-        author_name: 'github-actions'
-        author_email: 'github-actions@github.com'
+      - name: If scheduled or manually triggered, add updated flake.lock if changed, commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "./"
+          author_name: "github-actions"
+          author_email: "github-actions@github.com"

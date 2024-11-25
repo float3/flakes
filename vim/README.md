@@ -13,13 +13,13 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 If you want to try it out, run the Flake:
 
 ```
-nix run "github:hill/flakes/main?dir=vim"
+nix run "github:float3/flakes/main?dir=vim"
 ```
 
 If you want to install it, install it to your Nix profile:
 
 ```
-nix profile install "github:hill/flakes/main?dir=vim"
+nix profile install "github:float3/flakes/main?dir=vim"
 ```
 
 If you want to use it in a Flake, do something like this:
@@ -30,7 +30,7 @@ If you want to use it in a Flake, do something like this:
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    vim-configs.url = "github:hill/flakes/main?dir=vim";
+    vim-configs.url = "github:float3/flakes/main?dir=vim";
   };
 
   outputs = inputs@{ self, nixpkgs, vim-configs }: {

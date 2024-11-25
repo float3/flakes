@@ -2,7 +2,7 @@
   description = "hill vim config";
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    fish-flake.url = "github:hill/flakes?dir=fish";
+    fish-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
   };
   outputs = {
     self,
