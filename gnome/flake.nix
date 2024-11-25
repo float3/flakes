@@ -2,10 +2,9 @@
   description = "GNOME desktop flake";
 
   inputs = {
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-24.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-lts.url = "github:nixos/nixpkgs/nixos-lts";
-    
+
     fish-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -31,8 +30,8 @@
   };
   outputs = inputs @ {
     self,
-    nixpkgs,
     nixpkgs-stable,
+    nixpkgs-unstable,
     flake-utils,
     fish-flake,
     tmux-flake,
@@ -41,11 +40,11 @@
     nordic,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {
+      pkgs = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
-      stable-pkgs = nixpkgs-stable.legacyPackages.${system};
+      stable-pkgs = nixpkgs-unstable.legacyPackages.${system};
       myTmux = tmux-flake.packages.${system}.tmux;
       myVim = vim-flake.defaultPackage.${system};
       vimIme = "${vim-ime}/vim-ime.py";

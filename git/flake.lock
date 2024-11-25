@@ -177,11 +177,11 @@
       },
       "locked": {
         "dir": "vim",
-        "lastModified": 1732550857,
-        "narHash": "sha256-GWHWs7K1dPl1ge5K6+xE17u1WLfb6O8CCCHw/x8rd8o=",
+        "lastModified": 1732554413,
+        "narHash": "sha256-obMfSmv7EpmWeUiwgqDcnaDKCxv1mtbi2/jvcMFRt+w=",
         "ref": "refs/heads/master",
-        "rev": "1af54e3fb8f7ff6f337be0973d74015a31f431f7",
-        "revCount": 5,
+        "rev": "0ef6898911120189057ef446231d693adcb6ae75",
+        "revCount": 6,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=vim"
       },
