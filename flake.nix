@@ -70,13 +70,13 @@
         vscode-bin = vscode-flake.packages.${system}.code-bin;
         vimb = vimb-flake.packages.${system}.vimb;
         vimb-gl = vimb-flake.packages.${system}.vimb-gl;
-        op = op-flake.packages.${system}.op;
-        op-desktop-setup = op-flake.packages.${system}.op-desktop-setup;
-        nixos-vm = lima-flake.packages.${system}.lima-vm;
-        chromium-widevine = chromium-widevine-flake.packages.aarch64-linux.chromium-widevine;
+        # op = op-flake.packages.${system}.op;
+        # op-desktop-setup = op-flake.packages.${system}.op-desktop-setup;
+        # nixos-vm = lima-flake.packages.${system}.lima-vm;
+        # chromium-widevine = chromium-widevine-flake.packages.aarch64-linux.chromium-widevine;
         gnome = gnome-flake.packages.${system}.gnome-desktop-setup;
         gnome-dconf = gnome-flake.packages.${system}.dconf;
-        helix = helix-flake.packages.${system}.helix;
+        # helix = helix-flake.packages.${system}.helix;
       };
       formatter = pkgs.alejandra;
     });
