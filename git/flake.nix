@@ -2,19 +2,21 @@
   description = "hill git config";
 
   inputs = {
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     vim-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
   };
   outputs = {
     self,
-    nixpkgs,
+    nixpkgs-unstable,
     flake-utils,
     vim-flake,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = nixpkgs-unstable.legacyPackages.${system};
         vim = vim-flake.defaultPackage.${system};
         gitignore = pkgs.writeText "gitignore" ''
           # Direnv
