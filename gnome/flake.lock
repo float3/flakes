@@ -9,11 +9,11 @@
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1732560460,
-        "narHash": "sha256-f/eWA5wSzxYpfMZua+Q9CtZQSSx3Uw1aL3QLvtZvuOo=",
+        "lastModified": 1732575579,
+        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
         "ref": "refs/heads/master",
-        "rev": "f003a729f0ef17b53d1868a6db62a92970fa79f3",
-        "revCount": 15,
+        "rev": "2192054877b2b4844858d5826e83368697397f96",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
@@ -206,11 +206,11 @@
       },
       "locked": {
         "dir": "tmux",
-        "lastModified": 1732560460,
-        "narHash": "sha256-f/eWA5wSzxYpfMZua+Q9CtZQSSx3Uw1aL3QLvtZvuOo=",
+        "lastModified": 1732575579,
+        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
         "ref": "refs/heads/master",
-        "rev": "f003a729f0ef17b53d1868a6db62a92970fa79f3",
-        "revCount": 15,
+        "rev": "2192054877b2b4844858d5826e83368697397f96",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=tmux"
       },
@@ -232,11 +232,11 @@
       },
       "locked": {
         "dir": "vim",
-        "lastModified": 1732560460,
-        "narHash": "sha256-f/eWA5wSzxYpfMZua+Q9CtZQSSx3Uw1aL3QLvtZvuOo=",
+        "lastModified": 1732575579,
+        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
         "ref": "refs/heads/master",
-        "rev": "f003a729f0ef17b53d1868a6db62a92970fa79f3",
-        "revCount": 15,
+        "rev": "2192054877b2b4844858d5826e83368697397f96",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=vim"
       },
