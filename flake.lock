@@ -10,11 +10,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-OO2cSz6Ys675FeYlCUqwWEo+LpfQTg2BG0k2YdQe+Xc=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/fish",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/fish",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/fish",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/fish",
         "type": "path"
       }
     },
@@ -222,12 +222,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-Y40uwC9ix4mR7e96mD5LV5IOLAfcQ4dYvVUSyld4RYU=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/git",
+        "narHash": "sha256-yp2l3bwMp3QxV1Uba1GZ68eFnNeFjFmyPsByBrHpY/I=",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/git",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/git",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/git",
         "type": "path"
       }
     },
@@ -251,12 +251,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-nLjJuGcrZshyW+e3B2qSUem3NlrQjFRt8aHCnis5FEQ=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/gnome",
+        "narHash": "sha256-4Rz1XIWtfulmyT6GAvWb9kUy6TNQ4W4MSI1zufHvCFE=",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/gnome",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/gnome",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/gnome",
         "type": "path"
       }
     },
@@ -519,12 +519,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-KRpSYQgG5Hlk242YOMerdO74uA7GHZI6/TZzXsrXgHY=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/tmux",
+        "narHash": "sha256-vdVr+1CmXkGk7j0y1tJYi1HIwkm255KmdxDaxogRiu0=",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/tmux",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/tmux",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/tmux",
         "type": "path"
       }
     },
@@ -540,12 +540,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-SPmduF7fgoYMUBRir8+D1T1JR9sHQJkKLBkdOy38pl0=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vim",
+        "narHash": "sha256-jG9sl/Z0uWXH4oE0qnD2x4WNs3UU+nNpnYZEzkPmWuY=",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vim",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vim",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vim",
         "type": "path"
       }
     },
@@ -576,11 +576,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-oXYamnX0rL9kCNXw3mVJuORpkYjtFvuznL97S2lvFI4=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vimb",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vimb",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vimb",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vimb",
         "type": "path"
       }
     },
@@ -597,12 +597,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-sbJstYZ2kKYFuecGbJ9x0y0Hslez+JyrUubJfKrSPqg=",
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vscode",
+        "narHash": "sha256-RG4IMzizwFgDyQbe4jYdNuCkT2SVfVKVTQytADNqBUo=",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vscode",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/slgyh98lf0yirhjylbxlwrlmadvag82j-source/vscode",
+        "path": "/nix/store/rmwx3sqdg544vyn197kw0sy5gvvdk7rh-source/vscode",
         "type": "path"
       }
     }
