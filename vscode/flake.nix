@@ -1,7 +1,7 @@
 {
   description = "hill vscode config";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   inputs.fish-flake = {

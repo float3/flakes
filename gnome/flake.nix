@@ -2,9 +2,10 @@
   description = "GNOME desktop flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11"; # pinned for gnome-extensions-cli instability
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixpkgs-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-lts.url = "github:nixos/nixpkgs/nixos-lts";
+    
     fish-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
       inputs.nixpkgs.follows = "nixpkgs-unstable";

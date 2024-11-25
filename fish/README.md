@@ -29,7 +29,7 @@ If you want to use it in a Flake, do something like this:
   description = "my flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.05";
     fish-configs.url = "github:float3/flakes/main?dir=fish";
   };
 
