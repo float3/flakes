@@ -8,7 +8,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     fish-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

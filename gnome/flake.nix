@@ -6,16 +6,16 @@
 
     fish-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     tmux-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=tmux";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-flake = {
       url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     vim-ime = {

@@ -7,35 +7,35 @@
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
       url = "./fish";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     vim-flake = {
       url = "./vim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     git-flake = {
       url = "./git";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.vim-flake.follows = "vim-flake";
     };
     vscode-flake = {
       url = "./vscode";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     tmux-flake = {
       url = "./tmux";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     vimb-flake = {
       url = "./vimb";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     gnome-flake = {
       url = "./gnome";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
       inputs.tmux-flake.follows = "tmux-flake";
       inputs.vim-flake.follows = "vim-flake";
