@@ -2,16 +2,18 @@
   "nodes": {
     "fish-flake": {
       "inputs": {
-        "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2"
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1732554413,
-        "narHash": "sha256-obMfSmv7EpmWeUiwgqDcnaDKCxv1mtbi2/jvcMFRt+w=",
+        "lastModified": 1732555841,
+        "narHash": "sha256-vc7YY38n7JrJbxNU2Ig9jFxDYRsxHjkXGPLPnEeQne0=",
         "ref": "refs/heads/master",
-        "rev": "0ef6898911120189057ef446231d693adcb6ae75",
-        "revCount": 6,
+        "rev": "e12423ce976a88cc20d4973230f1df5b6a692040",
+        "revCount": 7,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
@@ -52,9 +54,8 @@
         "type": "github"
       },
       "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
+        "id": "flake-utils",
+        "type": "indirect"
       }
     },
     "flake-utils_3": {
@@ -75,53 +76,79 @@
         "type": "github"
       }
     },
-    "nixpkgs": {
+    "flake-utils_4": {
+      "inputs": {
+        "systems": "systems_4"
+      },
       "locked": {
-        "lastModified": 1732238832,
-        "narHash": "sha256-sQxuJm8rHY20xq6Ah+GwIUkF95tWjGRd1X8xF+Pkk38=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8edf06bea5bcbee082df1b7369ff973b91618b8d",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1732238832,
-        "narHash": "sha256-sQxuJm8rHY20xq6Ah+GwIUkF95tWjGRd1X8xF+Pkk38=",
-        "owner": "NixOS",
+        "lastModified": 1732555548,
+        "narHash": "sha256-MMMxrNDgyOyeMmmnclXkmt9GymeYSY6T8cG7MeJe2dM=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8edf06bea5bcbee082df1b7369ff973b91618b8d",
+        "rev": "43bb45ea6b5f52905b1c2ac40ef814be17a69e70",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "nixos",
+        "ref": "release-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1732238832,
-        "narHash": "sha256-sQxuJm8rHY20xq6Ah+GwIUkF95tWjGRd1X8xF+Pkk38=",
-        "owner": "NixOS",
+        "lastModified": 1732014248,
+        "narHash": "sha256-y/MEyuJ5oBWrWAic/14LaIr/u5E0wRVzyYsouYY3W6w=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8edf06bea5bcbee082df1b7369ff973b91618b8d",
+        "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nordic": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1656106219,
+        "narHash": "sha256-pKnFHaRBRVIgjn77gQHdGuznPelSkHzebNxuqfxgomM=",
+        "type": "tarball",
+        "url": "https://github.com/EliverLara/Nordic/releases/download/v2.2.0/Nordic.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/EliverLara/Nordic/releases/download/v2.2.0/Nordic.tar.xz"
       }
     },
     "root": {
       "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "vim-flake": "vim-flake"
+        "fish-flake": "fish-flake",
+        "flake-utils": "flake-utils_2",
+        "nixpkgs-stable": "nixpkgs-stable",
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "nordic": "nordic",
+        "tmux-flake": "tmux-flake",
+        "vim-flake": "vim-flake",
+        "vim-ime": "vim-ime"
       }
     },
     "systems": {
@@ -169,11 +196,56 @@
         "type": "github"
       }
     },
+    "systems_4": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "tmux-flake": {
+      "inputs": {
+        "fish-flake": [
+          "fish-flake"
+        ],
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "dir": "tmux",
+        "lastModified": 1732555841,
+        "narHash": "sha256-vc7YY38n7JrJbxNU2Ig9jFxDYRsxHjkXGPLPnEeQne0=",
+        "ref": "refs/heads/master",
+        "rev": "e12423ce976a88cc20d4973230f1df5b6a692040",
+        "revCount": 7,
+        "type": "git",
+        "url": "ssh://git@github.com/float3/flakes.git?dir=tmux"
+      },
+      "original": {
+        "dir": "tmux",
+        "type": "git",
+        "url": "ssh://git@github.com/float3/flakes.git?dir=tmux"
+      }
+    },
     "vim-flake": {
       "inputs": {
-        "fish-flake": "fish-flake",
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_3"
+        "fish-flake": [
+          "fish-flake"
+        ],
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
       },
       "locked": {
         "dir": "vim",
@@ -189,6 +261,22 @@
         "dir": "vim",
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=vim"
+      }
+    },
+    "vim-ime": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670450748,
+        "narHash": "sha256-J5fy57e43tFEX7rGIRZY9Ata4h4xuBv/q9fCun0IIeI=",
+        "owner": "heywoodlh",
+        "repo": "vim-input-editor",
+        "rev": "4a4edd16b28387812ee3f84874121d571eccca0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "heywoodlh",
+        "repo": "vim-input-editor",
+        "type": "github"
       }
     }
   },

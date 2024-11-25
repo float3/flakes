@@ -1,9 +1,10 @@
 {
   description = "hill git config";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.vim-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
-
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    vim-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
+  };
   outputs = {
     self,
     nixpkgs,

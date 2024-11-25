@@ -1,14 +1,16 @@
 {
   description = "hill vscode config";
 
-  nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
-  nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-  inputs.fish-flake = {
-    url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
-    inputs.nixpkgs.follows = "nixpkgs";
+    flake-utils.url = "github:numtide/flake-utils";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    fish-flake = {
+      url = "git+ssh://git@github.com/float3/flakes.git?dir=fish";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {

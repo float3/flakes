@@ -1,8 +1,9 @@
 {
   description = "hill fish flake";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+  };
   outputs = {
     self,
     nixpkgs,

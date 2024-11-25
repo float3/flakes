@@ -1,8 +1,10 @@
 {
   description = "hill vimb flake";
 
-  inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.nixgl.url = "github:nix-community/nixGL";
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixgl.url = "github:nix-community/nixGL";
+  };
 
   outputs = {
     self,
