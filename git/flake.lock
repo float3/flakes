@@ -7,11 +7,11 @@
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1732560460,
-        "narHash": "sha256-f/eWA5wSzxYpfMZua+Q9CtZQSSx3Uw1aL3QLvtZvuOo=",
+        "lastModified": 1732575579,
+        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
         "ref": "refs/heads/master",
-        "rev": "f003a729f0ef17b53d1868a6db62a92970fa79f3",
-        "revCount": 15,
+        "rev": "2192054877b2b4844858d5826e83368697397f96",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
@@ -77,11 +77,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732014248,
-        "narHash": "sha256-y/MEyuJ5oBWrWAic/14LaIr/u5E0wRVzyYsouYY3W6w=",
+        "lastModified": 1732837521,
+        "narHash": "sha256-jNRNr49UiuIwaarqijgdTR2qLPifxsVhlJrKzQ8XUIE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
+        "rev": "970e93b9f82e2a0f3675757eb0bfc73297cc6370",
         "type": "github"
       },
       "original": {
@@ -93,12 +93,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1732238832,
-        "narHash": "sha256-sQxuJm8rHY20xq6Ah+GwIUkF95tWjGRd1X8xF+Pkk38=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8edf06bea5bcbee082df1b7369ff973b91618b8d",
-        "type": "github"
+        "lastModified": 1730768919,
+        "narHash": "sha256-8AKquNnnSaJRXZxc5YmF/WfmxiHX6MMZZasRP6RRQkE=",
+        "path": "/nix/store/2dnhi8i27vs99rmn2zn3sibhis4jggxf-source",
+        "rev": "a04d33c0c3f1a59a2c1cb0c6e34cd24500e5a1dc",
+        "type": "path"
       },
       "original": {
         "id": "nixpkgs",
@@ -178,11 +177,11 @@
       },
       "locked": {
         "dir": "vim",
-        "lastModified": 1732575579,
-        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
+        "lastModified": 1733006582,
+        "narHash": "sha256-qjG2PTlMc4kPKqYWjmFj8r9zS5LXfWv1cMTvD3PphY4=",
         "ref": "refs/heads/master",
-        "rev": "2192054877b2b4844858d5826e83368697397f96",
-        "revCount": 16,
+        "rev": "df6fe98f83c51687e5697ee7d711d15d4cd87f38",
+        "revCount": 18,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=vim"
       },

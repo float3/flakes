@@ -9,11 +9,11 @@
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1732575579,
-        "narHash": "sha256-UuVBpDXMz53nNSnJ/IVvH4TjxYhDRtIEwb/PeU0MyCk=",
+        "lastModified": 1733006582,
+        "narHash": "sha256-qjG2PTlMc4kPKqYWjmFj8r9zS5LXfWv1cMTvD3PphY4=",
         "ref": "refs/heads/master",
-        "rev": "2192054877b2b4844858d5826e83368697397f96",
-        "revCount": 16,
+        "rev": "df6fe98f83c51687e5697ee7d711d15d4cd87f38",
+        "revCount": 18,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
@@ -100,11 +100,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1732499683,
-        "narHash": "sha256-Hw95rpgNiyAL4v9pJF2756PMud6O0p/1XQixs5f/Shk=",
+        "lastModified": 1732931481,
+        "narHash": "sha256-W4FRZVN3ExbjEQLoRijmmCu0vWJ5sYMRLzFCCsfDHhU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "b376bfa567fd25f9f22b6f51ffaa4f84d0b7c72f",
+        "rev": "ad53e4155149d1d69e45bc0ade1d9695d81a05b6",
         "type": "github"
       },
       "original": {
@@ -131,11 +131,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1732014248,
-        "narHash": "sha256-y/MEyuJ5oBWrWAic/14LaIr/u5E0wRVzyYsouYY3W6w=",
+        "lastModified": 1732837521,
+        "narHash": "sha256-jNRNr49UiuIwaarqijgdTR2qLPifxsVhlJrKzQ8XUIE=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
+        "rev": "970e93b9f82e2a0f3675757eb0bfc73297cc6370",
         "type": "github"
       },
       "original": {
