@@ -7,11 +7,11 @@
       },
       "locked": {
         "dir": "fish",
-        "lastModified": 1733006582,
-        "narHash": "sha256-qjG2PTlMc4kPKqYWjmFj8r9zS5LXfWv1cMTvD3PphY4=",
+        "lastModified": 1733006704,
+        "narHash": "sha256-Osg/pB+UcvghV9hpTesGm+XxsD6FRftOOkLwO5E7pRY=",
         "ref": "refs/heads/master",
-        "rev": "df6fe98f83c51687e5697ee7d711d15d4cd87f38",
-        "revCount": 18,
+        "rev": "9712b4ec61579d73e288617a31036925383b539d",
+        "revCount": 19,
         "type": "git",
         "url": "ssh://git@github.com/float3/flakes.git?dir=fish"
       },
@@ -59,10 +59,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1730768919,
-        "narHash": "sha256-8AKquNnnSaJRXZxc5YmF/WfmxiHX6MMZZasRP6RRQkE=",
-        "path": "/nix/store/2dnhi8i27vs99rmn2zn3sibhis4jggxf-source",
-        "rev": "a04d33c0c3f1a59a2c1cb0c6e34cd24500e5a1dc",
+        "lastModified": 1732521221,
+        "narHash": "sha256-2ThgXBUXAE1oFsVATK1ZX9IjPcS4nKFOAjhPNKuiMn0=",
+        "path": "/nix/store/frfyxcpzsdasdin76x83krbhpgkis8b0-source",
+        "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
         "type": "path"
       },
       "original": {
