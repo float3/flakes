@@ -11,7 +11,6 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -32,8 +31,6 @@ jobs:
             accept-flake-config = false
             experimental-features = nix-command flakes
 
-      - name: Setup Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v14
 
       - name: Check formatting
         run: nix run nixpkgs#alejandra -- --check .
@@ -72,8 +69,6 @@ jobs:
             accept-flake-config = false
             experimental-features = nix-command flakes
 
-      - name: Setup Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v14
 
       - name: Build ${{ matrix.package }}
         run: nix build ".#${{ matrix.package }}" --no-link --print-build-logs
@@ -101,8 +96,6 @@ jobs:
             accept-flake-config = false
             experimental-features = nix-command flakes
 
-      - name: Setup Nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v14
 
       # Consumers such as float3/nixos set inputs.nixpkgs.follows, so these
       # flakes are built against a nixpkgs newer than the one flake.lock pins.
