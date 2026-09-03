@@ -6,39 +6,44 @@
 
     flake-utils.url = "github:numtide/flake-utils";
     fish-flake = {
-      url = "./fish";
+      url = "path:./fish";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vim-flake = {
-      url = "./vim";
+      url = "path:./vim";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     git-flake = {
-      url = "./git";
+      url = "path:./git";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.vim-flake.follows = "vim-flake";
     };
+    alacritty-flake = {
+      url = "path:./alacritty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    mpv-flake = {
+      url = "path:./mpv";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    rofi-flake = {
+      url = "path:./rofi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    waybar-flake = {
+      url = "path:./waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     vscode-flake = {
-      url = "./vscode";
+      url = "path:./vscode";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
     };
     tmux-flake = {
-      url = "./tmux";
+      url = "path:./tmux";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.fish-flake.follows = "fish-flake";
-    };
-    vimb-flake = {
-      url = "./vimb";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    gnome-flake = {
-      url = "./gnome";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fish-flake.follows = "fish-flake";
-      inputs.tmux-flake.follows = "tmux-flake";
-      inputs.vim-flake.follows = "vim-flake";
     };
   };
 
@@ -51,8 +56,10 @@
     vim-flake,
     tmux-flake,
     vscode-flake,
-    vimb-flake,
-    gnome-flake,
+    alacritty-flake,
+    mpv-flake,
+    rofi-flake,
+    waybar-flake,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
@@ -64,16 +71,16 @@
         tmux = tmux-flake.packages.${system}.tmux;
         vim = vim-flake.defaultPackage.${system};
         vscode = vscode-flake.packages.${system}.default;
+        alacritty = alacritty-flake.packages.${system}.alacritty;
+        mpv = mpv-flake.packages.${system}.mpv;
+        rofi = rofi-flake.packages.${system}.rofi;
+        waybar = waybar-flake.packages.${system}.waybar;
         vscode-userdir = vscode-flake.packages.${system}.user-dir;
         vscode-bin = vscode-flake.packages.${system}.code-bin;
-        vimb = vimb-flake.packages.${system}.vimb;
-        vimb-gl = vimb-flake.packages.${system}.vimb-gl;
         # op = op-flake.packages.${system}.op;
         # op-desktop-setup = op-flake.packages.${system}.op-desktop-setup;
         # nixos-vm = lima-flake.packages.${system}.lima-vm;
         # chromium-widevine = chromium-widevine-flake.packages.aarch64-linux.chromium-widevine;
-        # gnome = gnome-flake.packages.${system}.gnome-desktop-setup;
-        # gnome-dconf = gnome-flake.packages.${system}.dconf;
         # helix = helix-flake.packages.${system}.helix;
       };
       formatter = pkgs.alejandra;

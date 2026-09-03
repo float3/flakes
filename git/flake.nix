@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    vim-flake.url = "git+ssh://git@github.com/float3/flakes.git?dir=vim";
+    vim-flake.url = "github:float3/flakes?dir=vim";
   };
   outputs = {
     self,

@@ -1,23 +1,5 @@
 {
   "nodes": {
-    "fish-flake": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-gkJ5KcD8HLi9gxNvDvIB3mnA6oYVHSaMTZ/VCCCjT4E=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/fish",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/fish",
-        "type": "path"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -210,56 +192,6 @@
         "type": "github"
       }
     },
-    "git-flake": {
-      "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "vim-flake": [
-          "vim-flake"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-De2duQy/C6o17H0LXVRM4RroURgbd0t9wAvZEcUaNzc=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/git",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/git",
-        "type": "path"
-      }
-    },
-    "gnome-flake": {
-      "inputs": {
-        "fish-flake": [
-          "fish-flake"
-        ],
-        "flake-utils": "flake-utils_4",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nordic": "nordic",
-        "tmux-flake": [
-          "tmux-flake"
-        ],
-        "vim-flake": [
-          "vim-flake"
-        ],
-        "vim-ime": "vim-ime"
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-h+v8Skea+BdQvamzH7kK/5ra+mWPlSFeKI33jcGTbxs=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/gnome",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/gnome",
-        "type": "path"
-      }
-    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -361,15 +293,8 @@
     },
     "root": {
       "inputs": {
-        "fish-flake": "fish-flake",
         "flake-utils": "flake-utils_2",
-        "git-flake": "git-flake",
-        "gnome-flake": "gnome-flake",
-        "nixpkgs": "nixpkgs",
-        "tmux-flake": "tmux-flake",
-        "vim-flake": "vim-flake",
-        "vimb-flake": "vimb-flake",
-        "vscode-flake": "vscode-flake"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
@@ -507,48 +432,6 @@
         "type": "github"
       }
     },
-    "tmux-flake": {
-      "inputs": {
-        "fish-flake": [
-          "fish-flake"
-        ],
-        "flake-utils": "flake-utils_5",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-NNqWCYvmTnfGID8cbJ81fYRIEb/wNAstZNGivSWu0FE=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/tmux",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/tmux",
-        "type": "path"
-      }
-    },
-    "vim-flake": {
-      "inputs": {
-        "fish-flake": [
-          "fish-flake"
-        ],
-        "flake-utils": "flake-utils_6",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-8P/nmgvgZBAqPPktd6EV9LXO0FemUAIH2fWKI3J1vns=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vim",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vim",
-        "type": "path"
-      }
-    },
     "vim-ime": {
       "flake": false,
       "locked": {
@@ -563,47 +446,6 @@
         "owner": "heywoodlh",
         "repo": "vim-input-editor",
         "type": "github"
-      }
-    },
-    "vimb-flake": {
-      "inputs": {
-        "flake-utils": "flake-utils_7",
-        "nixgl": "nixgl",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-5Cejl/NrbWd+1IzPBewD6LdNFMDY1CebfXaT5ob7HQ4=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vimb",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vimb",
-        "type": "path"
-      }
-    },
-    "vscode-flake": {
-      "inputs": {
-        "fish-flake": [
-          "fish-flake"
-        ],
-        "flake-utils": "flake-utils_9",
-        "nix-vscode-extensions": "nix-vscode-extensions",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-5DxITrjWFo9Zri7J7Zpos46hcTEfcAygoItv4MoF9qE=",
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vscode",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/c8sl6k90aa84pzldhx51w1d8jdb0x1vq-source/vscode",
-        "type": "path"
       }
     }
   },
