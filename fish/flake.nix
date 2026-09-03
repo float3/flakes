@@ -52,6 +52,13 @@
             set -gx EDITOR "nvim"
             set -gx GIT_EDITOR "nvim"
 
+            # Suggest the package providing an unknown command. Home Manager
+            # used to write this via programs.nix-index.enableFishIntegration;
+            # it lives here so the flake does not depend on that module.
+            function fish_command_not_found
+                ${pkgs.nix-index}/bin/command-not-found $argv
+            end
+
             # Hammerspoon
             # add-to-path /Applications/Hammerspoon.app/Contents/Frameworks/hs
 

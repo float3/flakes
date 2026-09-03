@@ -1,5 +1,20 @@
+# Merged from two places that had drifted apart: this file, and the
+# programs.alacritty Home Manager module in float3/nixos (home/desktop.nix).
+# The Home Manager copy carried env.TERM and selection.save_to_clipboard,
+# which this file lacked.
+#
+# The family is "Monaspace Neon", with the space. This file previously said
+# "MonaspaceNeon", which matches no fontconfig family, so alacritty silently
+# fell back to a default font.
+
+[env]
+TERM = "xterm-256color"
+
 [window]
 opacity = 0.75
 
 [font]
-normal = { family = "MonaspaceNeon", style = "Regular" }
+normal = { family = "Monaspace Neon", style = "Regular" }
+
+[selection]
+save_to_clipboard = true

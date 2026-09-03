@@ -134,19 +134,20 @@
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
         # Appearance settings
-        "editor.fontFamily" = "'MonaSpace Neon','JetBrainsMono Nerd Font Mono', 'monospace', 'Droid Sans Mono', 'monospace', 'Droid Sans Fallback'";
+        "editor.fontFamily" = "'Monaspace Neon', 'JetBrainsMono Nerd Font Mono', 'monospace'";
         "editor.fontLigatures" = true;
         "editor.fontSize" = 16;
         "editor.formatOnSave" = true;
+        "editor.inlayHints.enabled" = "off";
         "editor.inlineSuggest.enabled" = true;
         "editor.lineNumbers" = "relative";
         "editor.minimap.enabled" = true;
-        "editor.minimap.renderCharacters" = true;
+        "editor.minimap.renderCharacters" = false;
         # "workbench.activityBar.location" = "bottom";
         "workbench.colorTheme" = "Default High Contrast";
         "workbench.remoteIndicator.showExtensionRecommendations" = false;
         "workbench.reduceMotion" = true;
-        "workbench.startupEditor" = "readme";
+        "workbench.startupEditor" = "none";
         "workbench.statusBar.visible" = true;
         "workbench.tips.enabled" = true;
         "workbench.tree.indent" = 4;
@@ -161,7 +162,7 @@
         # Git
         "git.autofetch" = true;
         "git.confirmSync" = false;
-        "git.defaultBranch" = "master";
+        "git.defaultBranchName" = "master";
         "git.enableSmartCommit" = true;
         "git.openRepositoryInParentFolders" = "always";
         # Vim settings
@@ -173,13 +174,13 @@
         "vim.sneak" = true;
         "vim.targets.enable" = true;
         "vim.useSystemClipboard" = true;
-        "vim.neovimConfigPath" = "~/.config/nvim/init.vim";
+        "vim.neovimConfigPath" = "~/.config/nvim/init.lua";
         # Nix settings
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
         # Misc settings
         "cmake.configureOnOpen" = true;
-        "debug.console.wordWrap" = true;
+        "debug.console.wordWrap" = false;
         "diffEditor.codeLens" = true;
         "diffEditor.ignoreTrimWhitespace" = false;
         "direnv.path.executable" = "${pkgs.direnv}/bin/direnv";
@@ -194,14 +195,15 @@
         "github.copilot.editor.enableAutoCompletions" = true;
         "markdown.extension.toc.slugifyMode" = "zola";
         # Languages
-        "javascript;updateImportsOnFileMove;enabled" = "always";
-        "typescript;updateImportsOnFileMove;enabled" = "always";
-        "isort;args" = ["--profile" "black"];
+        "javascript.updateImportsOnFileMove.enabled" = "always";
+        "typescript.updateImportsOnFileMove.enabled" = "always";
+        "isort.args" = ["--profile" "black"];
         "[javascript]" = {
           "editor.defaultFormatter" = "vscode.typescript-language-features";
         };
         "[markdown]" = {
           "editor.wordWrap" = "off";
+          "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
         };
         "[python]" = {
           "editor.formatOnType" = true;
@@ -242,6 +244,22 @@
         };
         "[nix]" = {
         };
+        "[typescriptreact]" = {
+          "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        };
+        "files.associations" = {
+          ".clang-tidy" = "yaml";
+        };
+        "cmake.pinnedCommands" = [
+          "workbench.action.tasks.configureTaskRunner"
+          "workbench.action.tasks.runTask"
+        ];
+        "settingsSync.ignoredExtensions" = [
+          "visualstudiotoolsforunity.vstuc"
+          "github.copilot-chat"
+          "github.copilot"
+        ];
+        "settingsSync.ignoredSettings" = ["-vim.neovimConfigPath"];
         "[csharp]" = {
           "editor.defaultFormatter" = "ms-dotnettools.csharp";
         };

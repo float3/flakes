@@ -38,43 +38,74 @@
           terraform.rc
         '';
         gitconfig = pkgs.writeText "gitconfig" ''
+          [alias]
+            br = "branch"
+            ci = "commit"
+            cl = "clone"
+            co = "checkout"
+            cp = "cherry-pick"
+            last = "log -1 HEAD"
+            lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+            st = "status"
+            unstage = "reset HEAD --"
+
           [color]
             ui = "auto"
+
+          [commit]
+            gpgsign = true
 
           [core]
             autocrlf = "input"
             editor = "${vim}/bin/vim"
-            pager = "${pkgs.less}/bin/less -+F"
-            whitespace = "cr-at-eol"
             excludesFile = "${gitignore}"
+            longpaths = true
+            pager = "${pkgs.delta}/bin/delta"
+            whitespace = "cr-at-eol"
+
+          [delta]
+            line-numbers = true
+            navigate = true
+            side-by-side = true
 
           [diff]
+            colorMoved = "default"
             renames = "copies"
 
-          [format]
-            pretty = "%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset"
+          [gpg]
+            format = "openpgp"
+
+          [init]
+            defaultBranch = "master"
+
+          [interactive]
+            diffFilter = "${pkgs.delta}/bin/delta --color-only"
 
           [merge]
             conflictstyle = "diff3"
-            tool = "vimdiff"
-
-          [mergetool]
-            prompt = "true"
 
           [pull]
-            ff = "only"
+            rebase = false
 
           [push]
-            default = "simple"
+            autoSetupRemote = true
+            default = "current"
 
+          [rerere]
+            enabled = true
+
+          [submodule]
+            recurse = true
+
+          [user]
+            email = "hill@hilll.dev"
+            name = "hill"
+            signingkey = "0FB811AAB9F43C98"
+
+          # Last, so a machine-local file can override anything above.
           [include]
             path = ~/.gitconfig
             path = ~/.config/git/config
-
-          [user]
-            email = "github@hill.io"
-            name = "Spencer Heywood"
-
         '';
       in {
         packages = rec {
