@@ -22,6 +22,9 @@ nix run   github:float3/flakes#vim
 | `mpv` | [mpv](./mpv) | mpv with the Anime4K shader set and the Ctrl+1..6 mode bindings |
 | `rofi` | [rofi](./rofi) | rofi using the `fancy` theme from its own package |
 | `waybar` | [waybar](./waybar) | waybar with the sway module layout and stylesheet |
+| `eww` | [eww](./eww) | eww bar with its widgets, stylesheet and volume script |
+| `polybar` | [polybar](./polybar) | polybar plus a `polybar-launch` multi-monitor launcher |
+| `topgrade` | [topgrade](./topgrade) | topgrade with the upgrade step configuration |
 
 ## Using these from a NixOS or Home Manager config
 

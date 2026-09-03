@@ -35,6 +35,18 @@
       url = "path:./waybar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    eww-flake = {
+      url = "path:./eww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    polybar-flake = {
+      url = "path:./polybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    topgrade-flake = {
+      url = "path:./topgrade";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     vscode-flake = {
       url = "path:./vscode";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,6 +72,9 @@
     mpv-flake,
     rofi-flake,
     waybar-flake,
+    eww-flake,
+    polybar-flake,
+    topgrade-flake,
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
@@ -75,6 +90,9 @@
         mpv = mpv-flake.packages.${system}.mpv;
         rofi = rofi-flake.packages.${system}.rofi;
         waybar = waybar-flake.packages.${system}.waybar;
+        eww = eww-flake.packages.${system}.eww;
+        polybar = polybar-flake.packages.${system}.polybar;
+        topgrade = topgrade-flake.packages.${system}.topgrade;
         vscode-userdir = vscode-flake.packages.${system}.user-dir;
         vscode-bin = vscode-flake.packages.${system}.code-bin;
         # op = op-flake.packages.${system}.op;

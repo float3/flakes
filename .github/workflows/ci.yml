@@ -50,11 +50,14 @@ jobs:
       matrix:
         package:
           - alacritty
+          - eww
           - fish
           - git
           - mpv
+          - polybar
           - rofi
           - tmux
+          - topgrade
           - vim
           - vscode
           - waybar
@@ -74,3 +77,37 @@ jobs:
 
       - name: Build ${{ matrix.package }}
         run: nix build ".#${{ matrix.package }}" --no-link --print-build-logs
+
+  follows:
+    name: Build ${{ matrix.package }} against latest nixpkgs
+    runs-on: ubuntu-latest
+    needs: checks
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - fish
+          - git
+          - tmux
+          - vim
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            accept-flake-config = false
+            experimental-features = nix-command flakes
+
+      - name: Setup Nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v14
+
+      # Consumers such as float3/nixos set inputs.nixpkgs.follows, so these
+      # flakes are built against a nixpkgs newer than the one flake.lock pins.
+      # Building against the lock alone hides breakage from nixpkgs renames:
+      # a dead `${pkgs._1password}` reference inside a commented-out fish
+      # function evaluated fine here and broke the consumer.
+      - name: Build ${{ matrix.package }} with nixpkgs overridden
+        run: nix build ".#${{ matrix.package }}" --override-input nixpkgs github:nixos/nixpkgs/nixos-unstable --no-link --print-build-logs

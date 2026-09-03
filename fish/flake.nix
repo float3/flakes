@@ -57,10 +57,6 @@
 
             # Custom functions
 
-            # function op-unlock
-            #     env | grep -iqE "^OP_SESSION" || eval $(${pkgs._1password}/bin/op signin)
-            # end
-
             function geoiplookup
                 ${pkgs.curl}/bin/curl -s ipinfo.io/$argv[1]
             end
