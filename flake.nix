@@ -47,11 +47,6 @@
       url = "path:./topgrade";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    vscode-flake = {
-      url = "path:./vscode";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.fish-flake.follows = "fish-flake";
-    };
     tmux-flake = {
       url = "path:./tmux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -67,7 +62,6 @@
     git-flake,
     vim-flake,
     tmux-flake,
-    vscode-flake,
     alacritty-flake,
     mpv-flake,
     rofi-flake,
@@ -85,7 +79,6 @@
         git = git-flake.packages.${system}.git;
         tmux = tmux-flake.packages.${system}.tmux;
         vim = vim-flake.defaultPackage.${system};
-        vscode = vscode-flake.packages.${system}.default;
         alacritty = alacritty-flake.packages.${system}.alacritty;
         mpv = mpv-flake.packages.${system}.mpv;
         rofi = rofi-flake.packages.${system}.rofi;
@@ -93,8 +86,6 @@
         eww = eww-flake.packages.${system}.eww;
         polybar = polybar-flake.packages.${system}.polybar;
         topgrade = topgrade-flake.packages.${system}.topgrade;
-        vscode-userdir = vscode-flake.packages.${system}.user-dir;
-        vscode-bin = vscode-flake.packages.${system}.code-bin;
         # op = op-flake.packages.${system}.op;
         # op-desktop-setup = op-flake.packages.${system}.op-desktop-setup;
         # nixos-vm = lima-flake.packages.${system}.lima-vm;
