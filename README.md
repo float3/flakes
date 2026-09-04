@@ -25,15 +25,6 @@ nix run   github:float3/flakes#vim
 | `polybar` | [polybar](./polybar) | polybar plus a `polybar-launch` multi-monitor launcher |
 | `topgrade` | [topgrade](./topgrade) | topgrade with the upgrade step configuration |
 
-[vscode](./vscode) is deliberately not exported from the root flake. It depends
-on `nix-vscode-extensions`, a marketplace index of roughly 656 MB, and as a
-root input every consumer of this flake would fetch that whether or not they
-use VS Code. Build it directly instead:
-
-```sh
-nix build github:float3/flakes?dir=vscode
-```
-
 ## Using these from a NixOS or Home Manager config
 
 Add the flake as an input and pull packages out of it by system:
