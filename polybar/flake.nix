@@ -28,8 +28,8 @@
           ${pkgs.polybar}/bin/polybar-msg cmd quit || true
 
           counter=0
-          if ${pkgs.xorg.xrandr}/bin/xrandr --query >/dev/null 2>&1; then
-            for m in $(${pkgs.xorg.xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
+          if ${pkgs.xrandr}/bin/xrandr --query >/dev/null 2>&1; then
+            for m in $(${pkgs.xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
               MONITOR="$m" ${polybarWithConfig}/bin/polybar bar1 \
                 2>&1 | tee -a "/tmp/polybar$counter.log" & disown
               counter=$((counter + 1))
