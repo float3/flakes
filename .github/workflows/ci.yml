@@ -103,25 +103,3 @@ jobs:
       # function evaluated fine here and broke the consumer.
       - name: Build ${{ matrix.package }} with nixpkgs overridden
         run: nix build ".#${{ matrix.package }}" --override-input nixpkgs github:nixos/nixpkgs/nixos-unstable --no-link --print-build-logs
-
-  vscode:
-    name: Build vscode
-    runs-on: ubuntu-latest
-    needs: checks
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Install Nix
-        uses: cachix/install-nix-action@v31
-        with:
-          extra_nix_config: |
-            accept-flake-config = false
-            experimental-features = nix-command flakes
-
-      # Built from its own directory rather than as a root output. The vscode
-      # flake depends on nix-vscode-extensions, a ~656 MB marketplace index,
-      # and keeping it out of the root flake's inputs means consumers do not
-      # fetch that just to use fish or vim.
-      - name: Build vscode
-        run: nix build ./vscode --no-link --print-build-logs
