@@ -15,6 +15,12 @@
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
 
+        # nixpkgs renamed xorg.xrandr to xrandr, and this repo's lock pins a
+        # nixpkgs from before that while consumers follow one from after it.
+        # `or` keeps both happy: the new name where it exists, and only there
+        # is the fallback never evaluated, so no deprecation warning either.
+        xrandr = pkgs.xrandr or pkgs.xorg.xrandr;
+
         polybarWithConfig = pkgs.writeShellScriptBin "polybar" ''
           export XDG_DATA_DIRS="${pkgs.monaspace}/share:${pkgs.noto-fonts-cjk-sans}/share:''${XDG_DATA_DIRS:-}"
           exec ${pkgs.polybar}/bin/polybar --config=${./config.ini} "$@"
@@ -28,8 +34,8 @@
           ${pkgs.polybar}/bin/polybar-msg cmd quit || true
 
           counter=0
-          if ${pkgs.xorg.xrandr}/bin/xrandr --query >/dev/null 2>&1; then
-            for m in $(${pkgs.xorg.xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
+          if ${xrandr}/bin/xrandr --query >/dev/null 2>&1; then
+            for m in $(${xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
               MONITOR="$m" ${polybarWithConfig}/bin/polybar bar1 \
                 2>&1 | tee -a "/tmp/polybar$counter.log" & disown
               counter=$((counter + 1))
